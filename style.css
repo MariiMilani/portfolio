@@ -44,6 +44,7 @@ section{
     display: flex;
     flex-direction: column;
     padding: 5vh;
+    width: 100%;
 }
 
 section h3{
@@ -53,7 +54,6 @@ section h3{
 /*Section*/
 #projetos, #experiencia{
     background-color: rgba(93, 93, 93, 0.5);
-    width: 100%;
 }
 
 /*Sobre*/
@@ -222,7 +222,6 @@ section h3{
     margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
     content: '';
     position: absolute;
@@ -234,7 +233,6 @@ section h3{
     margin-left: -3px;
 }
 
-/* Container around content */
 .experiencia-container {
     padding: 10px 40px;
     position: relative;
@@ -242,7 +240,6 @@ section h3{
     width: 100%;
 }
 
-/* The circles on the timeline */
 .experiencia-container::after {
     content: '';
     position: absolute;
@@ -256,18 +253,15 @@ section h3{
     z-index: 1;
 }
 
-/* Place the container to the left */
 .left {
     left: -50.6%;
     align-self: end;
 }
 
-/* Place the container to the right */
 .right {
     left: 50.5%;
 }
 
-/* Add arrows to the left container (pointing right) */
 .left::before {
     content: " ";
     height: 0;
@@ -281,7 +275,6 @@ section h3{
     border-color: transparent transparent transparent rgb(143, 143, 143);
 }
 
-/* Add arrows to the right container (pointing left) */
 .right::before {
     content: " ";
     height: 0;
@@ -295,16 +288,65 @@ section h3{
     border-color: transparent rgb(143, 143, 143) transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
     left: -16px;
 }
 
-/* The actual content */
 .experiencia-container-content {
     padding: 20px 30px;
     background-color: rgb(143, 143, 143);
     position: relative;
     border-radius: 6px;
     width: 100%;
+}
+
+/*Habilidades*/
+.habilidade-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 33vh;
+    gap: 16px;
+}
+
+.habilidade-card{
+    width: 70%;
+    height: auto;
+    max-width: 600px;
+    gap: 16px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: grid;
+}
+
+.habilidade-card-header{
+    display: flex;
+    flex-direction: row;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.habilidade-card-header img{
+    width: 40px;
+    height: 40px;
+}
+
+.habilidade-card-header h4{
+}
+
+.habilidade-content-box{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: start;
+    height: 200px;
+}
+
+.habilidade-content{
+    background-color: rgb(143, 143, 143);
+    border-radius: 10px;
+    margin: 16px;
+    text-align: center;
+    align-content: center;
 }
